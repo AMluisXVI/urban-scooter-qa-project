@@ -1,0 +1,176 @@
+Sección 1: Inicio de Sesión y Autenticación,,,,,,,,
+ID del caso de prueba,Nombre del caso de prueba,Precondiciones,Número de pasos,Descripción de los pasos,Resultado esperado,Versión,Resultado,Enlace al informe de errores
+AM-TC-LI-001,Inicio de Sesión - Apertura por Primera Vez,1. App recién instalada o datos borrados.,1,1. Abrir la app.,"1. Se muestra la pantalla ""Inicio de sesión"" con campos ""Iniciar sesión"", ""Contraseña"", botón ""Iniciar sesión"" y enlace ""Olvidé la contraseña"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LI-002,Inicio de Sesión - Sesión Previa Activa,"1. El repartidor ha iniciado sesión previamente y la sesión sigue activa. 
+ 2. Cerrar y reabrir la app.",1,1. Abrir la app.,"1. Se muestra directamente la pantalla ""Lista de pedidos"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LI-003,"Inicio de Sesión - ""Olvidé la contraseña""","1. En pantalla ""Inicio de sesión"".",2,"1. Tocar ""Olvidé la contraseña"". 
+2. Tocar ""Aceptar"" en la notificación.","1. Aparece notificación ""Contacta a la gerencia: 0101"" con botón ""Aceptar"". 
+ 2. Notificación se cierra, permanece en ""Inicio de sesión"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LI-004,"Inicio de Sesión - Campo ""Iniciar sesión"" - Válido Mínimo","1. En pantalla ""Inicio de sesión"".",3,"1. Ingresar ""Us"" (2 caracteres latinos) en ""Iniciar sesión"".
+ 2. Ingresar contraseña válida (ej: ""1234"").
+ 3. Tocar ""Iniciar sesión"".","1. (Si credenciales correctas) Navega a ""Lista de pedidos"". (Si incorrectas) Muestra error ""Usuario o contraseña no válido"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-1
+AM-TC-LI-005,"Inicio de Sesión - Campo ""Iniciar sesión"" - Válido Máximo","1. En pantalla ""Inicio de sesión"".",3,"1. Ingresar ""UsuarioLog"" (10 caracteres latinos) en ""Iniciar sesión"". 
+2. Ingresar contraseña válida (ej: ""1234"").
+ 3. Tocar ""Iniciar sesión"".","1. (Si credenciales correctas) Navega a ""Lista de pedidos"". (Si incorrectas) Muestra error ""Usuario o contraseña no válido"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-2
+AM-TC-LI-006,"Inicio de Sesión - Campo ""Iniciar sesión"" - Inválido Corto","1. En pantalla ""Inicio de sesión"".",3,"1. Ingresar ""U"" (1 caracter) en ""Iniciar sesión"".
+ 2. Ingresar contraseña válida (ej: ""1234"").
+3. Tocar ""Iniciar sesión"".","1. Muestra notificación ""Usuario o contraseña no válido"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-3
+AM-TC-LI-007,"Inicio de Sesión - Campo ""Iniciar sesión"" - Inválido Largo","1. En pantalla ""Inicio de sesión"".",3,"1. Ingresar ""UsuarioLargoX"" (13 caracteres) en ""Iniciar sesión"".
+2. Ingresar contraseña válida (ej: ""1234"").
+3. Tocar ""Iniciar sesión"".","1. Muestra notificación ""Usuario o contraseña no válido"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-4
+AM-TC-LI-008,"Inicio de Sesión - Campo ""Iniciar sesión"" - Inválido Caracteres","1. En pantalla ""Inicio de sesión"".",3,"1. Ingresar ""Usuari0ñ"" (con número y ñ) en ""Iniciar sesión"". 
+ 2. Ingresar contraseña válida (ej: ""1234""). 
+3. Tocar ""Iniciar sesión"".","1. Muestra notificación ""Usuario o contraseña no válido"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-5
+AM-TC-LI-009,"Inicio de Sesión - Campo ""Contraseña"" - Válido Exacto","1. En pantalla ""Inicio de sesión"".",3,"1. Ingresar usuario válido (ej: ""TestUser"").
+ 2. Ingresar ""1234"" (4 números) en ""Contraseña"".
+ 3. Tocar ""Iniciar sesión"".","1. (Si credenciales correctas) Navega a ""Lista de pedidos"". (Si incorrectas) Muestra error ""Usuario o contraseña no válido"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-6
+AM-TC-LI-010,"Inicio de Sesión - Campo ""Contraseña"" - Inválido Corto","1. En pantalla ""Inicio de sesión"".",3,"1. Ingresar usuario válido (ej: ""TestUser"").
+ 2. Ingresar ""123"" (3 números) en ""Contraseña"".
+ 3. Tocar ""Iniciar sesión"".","1. Muestra notificación ""Usuario o contraseña no válido"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-7
+AM-TC-LI-011,"Inicio de Sesión - Campo ""Contraseña"" - Inválido Largo","1. En pantalla ""Inicio de sesión"".",3,"1. Ingresar usuario válido (ej: ""TestUser"").
+2. Ingresar ""12345"" (5 números) en ""Contraseña"".
+3. Tocar ""Iniciar sesión"".","1. Muestra notificación ""Usuario o contraseña no válido"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-8
+AM-TC-LI-012,"Inicio de Sesión - Campo ""Contraseña"" - Inválido Caracteres","1. En pantalla ""Inicio de sesión"".",3,"1. Ingresar usuario válido (ej: ""TestUser"").
+2. Ingresar ""abcd"" (letras) en ""Contraseña"".
+3. Tocar ""Iniciar sesión"".","1. Muestra notificación ""Usuario o contraseña no válido"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LI-013,Inicio de Sesión - Credenciales No Existentes,"1. En pantalla ""Inicio de sesión"".",3,"1. Ingresar ""NoExisteU"" en ""Iniciar sesión"".
+2. Ingresar ""9876"" en ""Contraseña
+3. Tocar ""Iniciar sesión"".","1. Muestra notificación ""Usuario o contraseña no válido"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-9
+AM-TC-LI-014,Salida de App y Re-Login Necesario,"1. Repartidor ha iniciado sesión. 
+2. Navegar a ""Lista de pedidos"".
+3. Salir de la app (ej: botón Home del OS).
+ 4. Simular expiración de sesión o necesidad de re-login por política.",1,1. Volver a abrir la app.,"1. Se muestra la pantalla ""Inicio de sesión"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-10
+,,,,,,,,
+Sección 2: Lista de Pedidos - Funcionalidad General y Pestañas,,,,,,,,
+ID del caso de prueba,Nombre del caso de prueba,Precondiciones,Número de pasos,Descripción de los pasos,Resultado esperado,Versión,Resultado,Enlace al informe de errores
+AM-TC-LP-001,"Visualización de Pestañas ""Todos los pedidos"" y ""Mis pedidos""",1. Repartidor ha iniciado sesión correctamente.,1,"1. Observar la parte superior de la pantalla ""Lista de pedidos"".","1. Se visualizan dos pestañas claramente identificadas: ""Todos los pedidos"" y ""Mis pedidos"". 
+2. Por defecto, ""Todos los pedidos"" está seleccionada.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LP-002,"Contenido Pestaña ""Todos los pedidos"" - Pedidos No Reclamados","1. Repartidor ha iniciado sesión. 
+ 2. Existen pedidos nuevos en el sistema que no han sido aceptados por ningún repartidor.",1,"1. Navegar/asegurar que la pestaña ""Todos los pedidos"" está seleccionada.","1. La lista muestra las tarjetas de los pedidos no reclamados. 
+2. Cada tarjeta muestra inicialmente la versión corta (Dirección, Fecha de entrega, Estación de metro).","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LP-003,"Pantalla ""Sin pedidos"" - Pestaña ""Todos los pedidos"" Vacía","1. Repartidor ha iniciado sesión. 
+2. No hay pedidos no reclamados en el sistema.",1,"1. Seleccionar la pestaña ""Todos los pedidos"".","1. Se muestra la pantalla ""Sin pedidos"" con el texto ""No hay pedidos"" y ""Nadie ha pedido un scooter aún"" y la imagen de las manos chocando.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LP-004,"Pantalla ""Sin pedidos"" - Pestaña ""Mis pedidos"" Vacía","1. Repartidor ha iniciado sesión. 
+2. El repartidor no ha aceptado ningún pedido.",1,"1. Seleccionar la pestaña ""Mis pedidos"".","1. Se muestra la pantalla ""Sin pedidos"" con el texto ""No hay pedidos"" y ""Nadie ha pedido un scooter aún"" (o un mensaje específico para ""Mis pedidos vacíos"") y la imagen.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LP-005,"Actualización Manual (Deslizar) - ""Sin pedidos"" a Pedido Nuevo","1. Repartidor en pestaña ""Todos los pedidos"", viendo pantalla ""Sin pedidos"".  2. Un nuevo pedido es creado en el sistema (por un usuario web).",1,1. Deslizar hacia abajo en la pantalla para actualizar la lista.,"1. La pantalla ""Sin pedidos"" desaparece.  2. Se muestra la tarjeta del nuevo pedido.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LP-006,Ordenación de Pedidos - Por Fecha de Entrega (Atrasados Primero),"1. Repartidor ha iniciado sesión.
+ 2. Existen múltiples pedidos en ""Todos los pedidos"" con diferentes fechas de entrega, incluyendo al menos un pedido cuya fecha de entrega ya pasó (atrasado).",1,"1. Observar el orden de los pedidos en la pestaña ""Todos los pedidos"".","1. Los pedidos atrasados aparecen en la parte superior de la lista. 
+ 2. Los pedidos no atrasados se ordenan por fecha de entrega (más próxima primero). 
+ 3. Los pedidos atrasados tienen su marco y fecha resaltados en rojo, y la negrita del texto es ""Media"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LP-007,Expansión/Colapso de Tarjeta de Pedido,"1. Repartidor ha iniciado sesión. 
+ 2. Hay al menos un pedido visible en ""Todos los pedidos"" o ""Mis pedidos"".",2,"1. Tocar en el cuerpo de una tarjeta de pedido en versión corta (no en el botón).
+ 2. Tocar en el cuerpo de la misma tarjeta de pedido ahora en versión completa (no en el botón).","1. La tarjeta se expande a la versión completa, mostrando campos adicionales (Nombre, Apellido, Teléfono, Color, Comentario). El botón (""Aceptar"" o ""Completar"") permanece visible y las tarjetas inferiores se desplazan.
+ 2. La tarjeta se colapsa de nuevo a la versión corta.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LP-008,"Tarjeta Completa - Campo ""Color"" como ""cualquiera""","1. Repartidor ha iniciado sesión.
+ 2. Un pedido fue creado por el usuario web sin especificar color. 
+ 3. El repartidor visualiza este pedido.",1,1. Expandir la tarjeta del pedido a la versión completa.,"1. En la versión completa de la tarjeta, el campo ""Color"" muestra el texto ""cualquiera"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-11
+,,,,,,,,
+Sección 3: Lista de Pedidos - Filtros,,,,,,,,
+ID del caso de prueba,Nombre del caso de prueba,Precondiciones,Número de pasos,Descripción de los pasos,Resultado esperado,Versión,Resultado,Enlace al informe de errores
+AM-TC-LPF-001,Apertura de Filtro de Estación de Metro,"1. Repartidor ha iniciado sesión.
+ 2. En pestaña ""Todos los pedidos"". 
+ 3. Hay pedidos disponibles de al menos una estación de metro.",1,1. Tocar el icono de filtro (=) en la parte superior derecha de la lista de pedidos.,"1. Se abre una lista/tarjeta de filtro mostrando las estaciones de metro donde existen pedidos. <
+2. Si hay pedidos para múltiples estaciones, cada estación donde hay al menos un pedido aparece en la lista.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPF-002,Filtro de Estación de Metro - Estaciones Únicas,"1. Repartidor ha iniciado sesión.  2. En pestaña ""Todos los pedidos"". 
+ 3. Existen múltiples pedidos para la misma estación de metro (ej: ""Evergreen Street"") y pedidos para otras estaciones.",1,1. Abrir el filtro de estación de metro.,"1. La estación ""Evergreen Street"" (y cualquier otra estación con múltiples pedidos) aparece solo una vez en la lista del filtro. No hay duplicados.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPF-003,Aplicación de Filtro de Estación de Metro,"1. Repartidor ha iniciado sesión. 
+2. En pestaña ""Todos los pedidos
+ 3. Se ha abierto el filtro de estación de metro y se muestra una lista de estaciones.",1,1. Seleccionar una estación de metro específica de la lista de filtros.,"1. La lista de ""Todos los pedidos"" se actualiza. 
+2. Solo se muestran los pedidos cuya estación de metro coincide con la seleccionada en el filtro.
+ 3. El icono de filtro puede indicar que un filtro está activo.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPF-004,Filtro de Estación de Metro - Capacidad (Menos de 8 Estaciones),"1. Repartidor ha iniciado sesión. 
+ 2. En pestaña ""Todos los pedidos"".
+ 3. Existen pedidos en 7 estaciones de metro diferentes.",1,1. Abrir el filtro de estación de metro.,"1. La tarjeta/lista de filtro muestra las 7 estaciones. 
+2. No hay barra de desplazamiento visible en la lista de filtros.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPF-005,Filtro de Estación de Metro - Capacidad (Más de 8 Estaciones),"1. Repartidor ha iniciado sesión. 
+2. En pestaña ""Todos los pedidos"". 
+3. Existen pedidos en 9 o más estaciones de metro diferentes.",1,1. Abrir el filtro de estación de metro.,"1. La tarjeta/lista de filtro muestra un máximo de 8 estaciones inicialmente. 
+ 2. Aparece una barra de desplazamiento vertical para ver las estaciones restantes.","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-12
+AM-TC-LPF-006,Actualización de Lista al Aplicar Filtro (si datos cambiaron),"1. Repartidor en ""Todos los pedidos"". 
+2. Un nuevo pedido para ""Hill Street"" es creado mientras el filtro no está aplicado.
+3. Otro pedido existente para ""Evergreen Street"" es aceptado por otro repartidor.",1,"1. Abrir filtro y seleccionar ""Hill Street"".","1. La lista filtrada por ""Hill Street"" muestra el nuevo pedido para ""Hill Street"".
+ 2. Si luego se filtra por ""Evergreen Street"", el pedido aceptado ya no aparece. ","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+,,,,,,,,
+Sección 4: Lista de Pedidos - Aceptación de Pedidos,,,,,,,,
+ID del caso de prueba,Nombre del caso de prueba,Precondiciones,Número de pasos,Descripción de los pasos,Resultado esperado,Versión,Resultado,Enlace al informe de errores
+AM-TC-LPA-001,Aceptar Pedido - Flujo Completo Exitoso (desde Tarjeta Corta),"1. Repartidor ha iniciado sesión.
+ 2. En pestaña ""Todos los pedidos"". 
+3. Hay un pedido no reclamado visible en formato de tarjeta corta.",2,"1. Tocar el botón ""Aceptar"" en la tarjeta corta del pedido. 
+2. En la notificación ""¿Deseas aceptar el pedido?"", tocar ""Sí"".","1. Al tocar ""Aceptar"", aparece notificación ""¿Deseas aceptar el pedido?"" con botones ""Sí"" y ""No"".
+ 2. Al tocar ""Sí"":
+ a. La tarjeta del pedido sale de ""Todos los pedidos"" con animación hacia arriba.
+b. El pedido aparece en la pestaña ""Mis pedidos"".
+c. Punto azul aparece en ""Mis pedidos"" (si no estaba activa). 
+d. En ""Mis pedidos"", el botón de la tarjeta es ""Completar"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPA-002,Aceptar Pedido - Cancelación en Notificación,"1. Repartidor ha iniciado sesión. 
+2. En pestaña ""Todos los pedidos"". 
+3. Hay un pedido no reclamado visible.",2,"1. Tocar el botón ""Aceptar"" en la tarjeta del pedido. 
+2. En la notificación ""¿Deseas aceptar el pedido?"", tocar ""No"".","1. Aparece notificación ""¿Deseas aceptar el pedido?"".
+ 2. Al tocar ""No"", la notificación se cierra. El pedido permanece en ""Todos los pedidos"" y el botón ""Aceptar"" sigue activo en su tarjeta.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPA-003,Intento de Aceptar Pedido Ya Aceptado por Otro Repartidor,"1. Repartidor A ha iniciado sesión.
+ 2. Repartidor B ha iniciado sesión (en otro dispositivo/instancia). 
+ 3. Un pedido X está visible en ""Todos los pedidos"" para ambos.
+ 4. Repartidor B acepta el pedido X. 
+ 5. Repartidor A NO ha actualizado su lista de ""Todos los pedidos"" aún (el pedido X sigue visible para A).",1,"1. Repartidor A toca el botón ""Aceptar"" en la tarjeta del pedido X.","1. Aparece un mensaje de error: ""No puedes aceptar el pedido. Ya ha sido aceptado por otro repartidor o repartidora, o el usuario o usuaria lo ha cancelado.""
+ 2. El pedido X no se mueve a ""Mis pedidos"" del Repartidor A.","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-13
+AM-TC-LPA-004,Intento de Aceptar Pedido Cancelado por Usuario,"1. Repartidor ha iniciado sesión.
+ 2. Un pedido Y está visible en ""Todos los pedidos"".
+ 3. El usuario (cliente web) cancela el pedido Y. 
+4. El repartidor NO ha actualizado su lista de ""Todos los pedidos"" aún (el pedido Y sigue visible).",1,"1. El repartidor toca el botón ""Aceptar"" en la tarjeta del pedido Y.","1. Aparece un mensaje de error: ""No puedes aceptar el pedido. Ya ha sido aceptado por otro repartidor o repartidora, o el usuario o usuaria lo ha cancelado."" 
+2. El pedido Y no se mueve a ""Mis pedidos"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-14
+AM-TC-LPA-005,"Actualización de Lista ""Todos los pedidos"" (Deslizar) tras Aceptación por Otro","1. Repartidor A en ""Todos los pedidos"".
+ 2. Un pedido Z está visible.
+ 3. Repartidor B (otro) acepta el pedido Z.",1,"1. Repartidor A desliza hacia abajo para actualizar la lista en ""Todos los pedidos"".","1. El pedido Z desaparece de la lista ""Todos los pedidos"" del Repartidor A.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPA-006,"Actualización de Lista ""Todos los pedidos"" (Navegación) tras Aceptación por Otro","1. Repartidor A en ""Todos los pedidos"". <br> 2. Un pedido W está visible. <br> 3. Repartidor B (otro) acepta el pedido W.",2,"1. Repartidor A navega a la pestaña ""Mis pedidos"". 
+2. Repartidor A regresa a la pestaña ""Todos los pedidos"".","1. El pedido W desaparece de la lista ""Todos los pedidos"" del Repartidor A.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPA-007,"No Actualización Automática de ""Todos los pedidos"" tras Aceptación Propia","1. Repartidor en ""Todos los pedidos"" con varios pedidos visibles (P1, P2, P3).",1,1. Repartidor acepta el pedido P1.,"1. P1 se mueve a ""Mis pedidos"".
+ 2. La lista en ""Todos los pedidos"" inmediatamente después de la animación de P1 muestra P2 y P3, pero no se recarga/reordena automáticamente (hasta una acción de actualización explícita como deslizar).","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPA-008,"Lógica Punto Azul en ""Mis pedidos""","1. Repartidor ha iniciado sesión.
+ 2. Pestaña ""Todos los pedidos"" está activa.
+3. Repartidor acepta un pedido.",1,"1. Observar la pestaña ""Mis pedidos"" inmediatamente después de aceptar el pedido (sin navegar a ella).","1. Aparece un punto azul indicador en la pestaña ""Mis pedidos"".
+ 2. La aplicación no transiciona automáticamente a la pestaña ""Mis pedidos"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-18
+,,,,,,,,
+Sección 5: Lista de Pedidos - Completar Pedidos,,,,,,,,
+ID del caso de prueba,Nombre del caso de prueba,Precondiciones,Número de pasos,Descripción de los pasos,Resultado esperado,Versión,Resultado,Enlace al informe de errores
+AM-TC-LPC-001,"Botón ""Completar"" en ""Mis pedidos""","1. Repartidor ha iniciado sesión. 
+ 2. Repartidor ha aceptado un pedido.
+ 3. Repartidor está en la pestaña ""Mis pedidos"" viendo la tarjeta del pedido aceptado.",1,1. Observar el botón en la tarjeta del pedido.,"1. El botón en la tarjeta del pedido muestra el texto ""Completar"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPC-002,Completar Pedido - Flujo Exitoso (desde Tarjeta Corta),"1. Repartidor en ""Mis pedidos"" con un pedido aceptado visible en tarjeta corta.",2,"1. Tocar el botón ""Completar"" en la tarjeta corta.
+ 2. En la notificación ""¿Has completado el pedido?"", tocar ""Sí"".","1. Al tocar ""Completar"", aparece notificación ""¿Has completado el pedido?"" con botones ""Sí"" y ""No""
+ 2. Al tocar ""Sí"": 
+a. El pedido se marca como completo.
+b. La tarjeta del pedido se mueve al final de la lista en ""Mis pedidos"".
+c. Si el pedido estaba atrasado (rojo), ya no lo está.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPC-003,Completar Pedido - Flujo Exitoso (desde Tarjeta Completa),"1. Repartidor en ""Mis pedidos"" con un pedido aceptado.
+ 2. Expandir la tarjeta del pedido a la versión completa.",2,"1. Tocar el botón ""Completar"" en la tarjeta completa.
+ 2. En la notificación ""¿Has completado el pedido?"", tocar ""Sí"".","1. Mismos resultados que AM-TC-LPC-002, paso 1.
+ 2. Mismos resultados que AM-TC-LPC-002, paso 2.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPC-004,Completar Pedido - Cancelación en Notificación,"1. Repartidor en ""Mis pedidos"".
+ 2. Tocar el botón ""Completar"" en un pedido.",1,"1. En la notificación ""¿Has completado el pedido?"", tocar ""No"".","1. La notificación se cierra.
+2. El pedido permanece en su estado actual en ""Mis pedidos"" (no se marca como completo). El botón ""Completar"" sigue visible.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-LPC-005,Ordenación de Pedidos Completados (Más Antiguo Abajo),"1. Repartidor ha completado varios pedidos (P1, P2, P3) en ""Mis pedidos"".
+ 2. P1 se completó primero, luego P2, luego P3 (P3 es el más reciente).",1,"1. Observar el orden de los pedidos completados al final de la lista ""Mis pedidos"".","1. Los pedidos completados se ordenan al final de la lista. 
+2. P3 (el completado más recientemente) aparece más arriba entre los completados, y P1 (el completado más antiguamente) aparece más abajo entre los completados. (Interpretando ""cuanto antes se complete, más abajo estará"").","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+,,,,,,,,
+Sección 6: Notificaciones Push,,,,,,,,
+ID del caso de prueba,Nombre del caso de prueba,Precondiciones,Número de pasos,Descripción de los pasos,Resultado esperado,Versión,Resultado,Enlace al informe de errores
+AM-TC-NOT-001,Recepción de Notificación Push (2 Horas Restantes),"1. Repartidor ha iniciado sesión y aceptado un pedido. 
+2. La entrega del pedido es para el día actual. 
+3. Son las 9:58 p.m. (o se simula que faltan 2 horas y 1 minuto para las 11:59 p.m. del día de entrega).",1,1. Esperar/Observar la recepción de una notificación push.,1. Se recibe una notificación push en el dispositivo.,"Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-15
+AM-TC-NOT-002,Contenido de Notificación Push,"1. Se ha recibido la notificación push de ""2 horas restantes"".",1,1. Leer el contenido de la notificación push.,"1. La notificación contiene el texto: ""2 horas hasta el final del pedido. Se debe completar el pedido ""[Dirección del pedido específico]"". Si no llegas a tiempo, contacta a soporte: 0101"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-16
+AM-TC-NOT-003,Acción al Tocar Notificación Push,"1. Se ha recibido la notificación push de ""2 horas restantes"". 
+ 2. La aplicación Urban Scooter puede estar cerrada o en segundo plano.",1,1. Tocar la notificación push en la bandeja de notificaciones del sistema operativo.,"1. La aplicación Urban Scooter se abre o se trae al primer plano. 
+ 2. La aplicación navega automáticamente y muestra la pestaña ""Mis pedidos"".","Pixel 6, SO: Android 16.0 (""Baklava"")",Failed,MT-17
+,,,,,,,,
+Sección 7: Manejo de Red y Conectividad,,,,,,,,
+ID del caso de prueba,Nombre del caso de prueba,Precondiciones,Número de pasos,Descripción de los pasos,Resultado esperado,Versión,Resultado,Enlace al informe de errores
+AM-TC-RED-001,"Popup ""Sin acceso a Internet"" al Tocar Botón Activo sin Red","1. Conexión a internet del dispositivo está desactivada. 
+2. Repartidor está en cualquier pantalla con botones activos (ej: ""Iniciar sesión"", ""Aceptar pedido"", ""Completar pedido"", botón de filtro).",1,1. Tocar un botón activo en la aplicación.,"1. Aparece una ventana emergente con el título ""Sin acceso a Internet"", el mensaje ""Comprueba la conexión o espera una notificación de que se ha restablecido"" y un botón ""ok"" (o ""Aceptar"").","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-RED-002,"Cerrar Popup ""Sin acceso a Internet""","1. El popup ""Sin acceso a Internet"" está visible.",1,"1. Tocar el botón ""ok"" (o ""Aceptar"") en el popup.","1. El popup ""Sin acceso a Internet"" se cierra. La acción original que disparó el popup no se ejecuta.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+AM-TC-RED-003,"Reaparición de Popup ""Sin acceso a Internet"" si Red Sigue Caída","1. Conexión a internet sigue desactivada.
+ 2. El popup ""Sin acceso a Internet"" fue cerrado previamente.
+ 3. Repartidor está en una pantalla con botones activos.",1,1. Tocar nuevamente un botón activo o cualquier zona activa en la aplicación.,"1. El popup ""Sin acceso a Internet"" vuelve a aparecer.","Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,
+,,,,,,,,
+Sección 8: Generalidades de la Aplicación,,,,,,,,
+ID del caso de prueba,Nombre del caso de prueba,Precondiciones,Número de pasos,Descripción de los pasos,Resultado esperado,Versión,Resultado,Enlace al informe de errores
+AM-TC-GEN-001,Orientación Vertical Exclusiva de la Aplicación,1. La aplicación Urban Scooter está abierta en cualquier pantalla.,1,1. Intentar rotar el dispositivo físico o el emulador a la orientación horizontal.,1. La interfaz de la aplicación permanece fija en orientación vertical. No hay cambio a la orientación horizontal.,"Pixel 6, SO: Android 16.0 (""Baklava"")",Passed,

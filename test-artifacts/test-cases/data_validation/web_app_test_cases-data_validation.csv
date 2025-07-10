@@ -1,0 +1,43 @@
+Campo,Nombre de la clase,Límites,Datos de prueba dentro de la clase (contenido del campo),Datos de prueba en los límites (contenido del campo),Explicación,Estado,Enlace al informe de errores
+Nombre,"Longitud de caracteres (letras latinas, espacios, guiones)","1, 2, 3, 14, 15, 16","""1 - A
+2 - Al
+3 - Ana
+14 - Supercalifragil
+15 - AbcdeFghijKlmno
+16 - Supercalifragilis""",Al (2 car) XV (2 car) Supercalifragil (15 car) AbcdeFghijKlmno (15 car) A (1 car) Supercalifragilis (16 car),"Prueba longitud mínima, máxima y valores adyacentes. Incluye caracteres permitidos.",Passed,
+,"Caracteres permitidos (solo latín, espacio, guion)",N/A,Valido,NoValido123 NoVálidoÑ NoValido@,Verifica que solo se acepten los caracteres especificados.,Passed,
+,Campo obligatorio,N/A,(Se llena con dato válido),(vacío),Verifica que el campo no pueda dejarse vacío al intentar avanzar.,Passed,
+Apellido,"Longitud de caracteres (letras latinas, espacios, guiones)","1, 2, 3, 14, 15, 16","""1 - X
+2 - Li
+3 - Ana
+14 - GonzalezPerez
+15 - UnApellidoLargo
+16 - UnApellidoMuyLargo""",Li (2 car) UnApellidoLargo (15 car) X (1 car) UnApellidoMuyLargo (16 car),Similar a Nombre.,Passed,
+,"Caracteres permitidos (solo latín, espacio, guion)",N/A,Valido,NoValido123 NoVálidoÑ NoValido@,Similar a Nombre.,Passed,
+,Campo obligatorio,N/A,(Se llena con dato válido),(vacío),Similar a Nombre.,Passed,
+Dirección,"Longitud de caracteres (latín, números, espacios, guiones, puntos, comas)","4, 5, 6, 49, 50, 51","""4 - Calle
+5 - Direc
+6 - Av.Sol
+49 - Una dirección muy larga que ocupa cuarenta y nueve car
+50 - Una dirección muy larga que ocupa exactamente cincuenta
+51 - Una dirección excesivamente larga que supera los cincuenta caracteres""",Av.Sol (6 car) Direc (5 car) Una dirección muy larga que ocupa cuarenta y nueve car (49 car) Una dirección muy larga que ocupa exactamente cincuenta (50 car) Dir (3 car) Una dirección excesivamente larga que supera los cincuenta caracteres (58 car),"Prueba longitud mínima, máxima y valores adyacentes.",Failed,VDD-1
+,Eliminación de espacios al inicio/final,N/A,Calle Central 1,N/A,Verifica que los espacios extra se recorten al perder el foco.,Passed,
+,Campo obligatorio,N/A,(Se llena con dato válido),(vacío),Verifica que el campo no pueda dejarse vacío al intentar avanzar.,Passed,
+Estación de metro,Selección de lista (API Los Ángeles),N/A,(Seleccionar una de la lista),(Intentar escribir una no existente y no seleccionar) (vacío),Prueba selección válida y manejo de entrada no coincidente o vacía.,Passed,
+,Campo obligatorio,N/A,(Se llena con dato válido),(vacío),Verifica que el campo no pueda dejarse vacío al intentar avanzar.,Passed,
+Teléfono,"Longitud de caracteres (números, ""+"")","9, 10, 11, 12, 13","9 - 123456789
+10 - 1234567890
+11 - 12345678901
+12 - +12345678901
+13 - +123456789012",1234567890 (10 car) +12345678901 (12 car) 123456789 (9 car) +123456789012 (13 car),"Prueba longitud mínima, máxima y valores adyacentes.",Passed,
+,"Caracteres permitidos (solo números, ""+"")",N/A,1234567890,123-456-7890 TelefonoABC,Verifica que solo se acepten los caracteres especificados.,Passed,
+,Campo obligatorio,N/A,(Se llena con dato válido),(vacío),Verifica que el campo no pueda dejarse vacío al intentar avanzar.,Passed,
+Fecha de entrega,Selección de calendario (a partir del día siguiente),>= Día Siguiente,(Seleccionar fecha válida: mañana + 5 días),(Seleccionar fecha válida: mañana) (Intentar seleccionar hoy) (Intentar seleccionar ayer),Prueba la selección de fechas permitidas y el bloqueo de fechas no permitidas.,Failed,VDD-2
+,Campo obligatorio,N/A,(Se llena con dato válido),(vacío),Verifica que el campo no pueda dejarse vacío al intentar pedir.,Failed,VDD-3
+Periodo de alquiler,Selección de lista desplegable,"1 día, 7 días",3 días,"1 día 7 días (Intentar seleccionar ""0 días"" si existiera o una opción no válida)",Prueba selección de opciones válidas de la lista.,Passed,
+,Campo obligatorio,N/A,(Se llena con dato válido),(vacío),Verifica que el campo no pueda dejarse vacío al intentar pedir.,Passed,
+Color del scooter,Selección de casilla de verificación (opcional),N/A,negro gris negro y gris,(ninguno seleccionado),"Campo opcional, prueba todas las combinaciones de selección.",Passed,
+Comentario,"Longitud máxima de caracteres (latín, números, espacios, guiones, etc.)","23, 24, 25","23 - Texto de veintitrés caract.
+24 - Texto de veinticuatro car.
+25 - Texto de veinticinco caract.",Texto de veinticuatro car. (24 car) Texto de veinticinco caract. (25 car),Prueba la longitud máxima y un valor que la excede. Campo opcional.,Failed,VDD-4
+,Campo opcional,N/A,(Se llena con dato válido),(vacío),Verifica que el campo pueda dejarse vacío.,Passed,

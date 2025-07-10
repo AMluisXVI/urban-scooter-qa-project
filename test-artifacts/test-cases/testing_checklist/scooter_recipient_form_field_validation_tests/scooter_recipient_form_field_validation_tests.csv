@@ -1,0 +1,30 @@
+#,"Casos de Prueba: Validación de Campos - Formulario ""Para quién es el scooter""",Estado,Enlace al informe de errores
+25,"Nombre: Válido (longitud media, ej: Juan).",Passed,
+26,"Nombre: Válido (mínima longitud, 2 caracteres, ej: Al).",Passed,
+27,"Nombre: Válido (máxima longitud, 15 caracteres, ej: ConstantinoplaX).",Passed,
+28,"Nombre: Válido (con guion, ej: Jean-Luc).",Passed,
+29,"Nombre: Válido (con espacio, ej: Mary Anne).",Passed,
+30,"Nombre: Válido (con tilde, ej: Sofía).",Failed,USWF-1
+31,"Nombre: Inválido (vacío - campo obligatorio). Al intentar avanzar, muestra error y campo en rojo.",Passed,
+32,"Nombre: Inválido (muy corto, 1 caracter, ej: A). Al intentar avanzar, muestra error y campo en rojo.",Passed,
+33,"Nombre: Inválido (muy largo, 16 caracteres, ej: Supercalifragili). Al intentar avanzar, muestra error y campo en rojo.",Passed,
+34,"Nombre: Inválido (caracteres no latinos (cirílico)/números, ej: Иван123). Al intentar avanzar, muestra error y campo en rojo.",Passed,
+35,"Apellido: Válido (longitud media, ej: Pérez).",Passed,
+36,"Apellido: Válido (con tilde, ej: García).",Failed,USWF-2
+37,"Apellido: Inválido (vacío - campo obligatorio). Al intentar avanzar, muestra error y campo en rojo.",Passed,
+38,"Dirección: Válida (con números, comas, puntos, ej: Calle Falsa 123, Apto. 4B).",Passed,
+39,"Dirección: Válida (con tilde, ej: Calle Colón número 5, València).",Failed,USWF-3
+40,"Dirección: Válida (mínima longitud, 5 caracteres, ej: Av.Sol).",Passed,
+41,"Dirección: Válida (espacios antes/después se eliminan al perder el foco, ej:"" Gran Vía 1 "" se convierte en ""Gran Vía 1"").",Passed,
+42,"Dirección: Inválida (vacía - campo obligatorio). Al intentar avanzar, muestra error y campo en rojo.",Failed,USWF-4
+43,"Dirección: Inválida (muy corta, 4 caracteres, ej: Hola). Al intentar avanzar, muestra error y campo en rojo.",Passed,
+44,"Dirección: Inválida (muy larga, +50 caracteres, ej: Hola). Al intentar avanzar, muestra error y campo en rojo.",Passed,
+45,Estación Metro: Válida (seleccionada de sugerencias de la API).,Passed,
+46,"Estación Metro: Inválida (vacía - campo obligatorio). Al intentar avanzar, muestra error y campo en rojo.",Passed,
+47,"Teléfono: Válido (10 dígitos, sin +, ej: 1234567890).",Passed,
+48,"Teléfono: Válido (12 caracteres, con +, ej: +11234567890).",Passed,
+49,"Teléfono: Inválido (vacío - campo obligatorio). Al intentar avanzar, muestra error y campo en rojo.",Passed,
+50,"Teléfono: Inválido (muy corto, 9 caracteres, ej: 123456789). Al intentar avanzar, muestra error y campo en rojo.",Passed,
+51,"Teléfono: Inválido (muy largo, 13 caracteres, ej: +123456789012). Al intentar avanzar, muestra error y campo en rojo.",Passed,
+52,"Teléfono: Inválido (con letras, ej: 12345ABCDE). Al intentar avanzar, muestra error y campo en rojo.",Passed,
+53,"Navegación: Al hacer clic en ""Siguiente"" con todos los campos de ""Para quién es el scooter"" válidos, se avanza a la pantalla ""Alquiler"".",Passed,

@@ -1,0 +1,22 @@
+#,"Casos de Prueba: Validación de Campos y Navegación - Formulario ""Alquiler""",Estado,Enlace al informe de errores
+54,"Fecha de entrega: Válida (seleccionada del calendario, fecha a partir de mañana). El campo se resalta en azul.",Passed,
+55,"Fecha de entrega: Inválida (vacía - campo obligatorio). Al intentar pedir, muestra error ""Introduce un Fecha de entrega correcto"" y campo en rojo.",Failed,USWA-1
+56,Fecha de entrega: El calendario no permite seleccionar el día actual o días anteriores.,Failed,USWA-2
+57,"Periodo de alquiler: Válido (seleccionado de la lista desplegable, ej: 1 día).",Passed,
+58,"Periodo de alquiler: Inválido (vacío - campo obligatorio). Al intentar pedir, muestra error ""Introduce un Periodo de alquiler correcto"" y campo en rojo.",Failed,USWA-3
+59,Color del scooter: Opcional (ninguno seleccionado). El pedido se puede crear si los demás campos obligatorios son válidos.,Passed,
+60,"Color del scooter: Opcional (un color seleccionado, ej: negro). El pedido se crea con el color seleccionado.",Passed,
+61,"Color del scooter: Opcional (ambos colores seleccionados, ej: negro y gris). El pedido se crea.",Passed,
+62,Comentario: Opcional (vacío). El pedido se puede crear si los demás campos obligatorios son válidos.,Passed,
+63,"Comentario: Válido (texto con longitud media, ej: Dejar en conserjería).",Passed,
+64,"Comentario: Válido (con números, ej: Llamar al 123-456).",Passed,
+65,"Comentario: Válido (con guiones, ej: Entrega rápida - urgente).",Passed,
+66,"Comentario: Válido (con puntos, ej: Dejar en puerta. Gracias.).",Passed,
+67,"Comentario: Válido (con comas, ej: Cuidado, perro pequeño, no ladra).",Passed,
+68,"Comentario: Válido (combinación de caracteres permitidos, ej: Paq. grande, código 789-A).",Passed,
+69,"Comentario: Válido (máxima longitud, 24 caracteres, ej: No tocar timbre gracias!).",Passed,
+70,"Comentario: Inválido (muy largo, 25+ caracteres, ej: Este es un comentario demasiado largo para ser valido). El sistema impide escribir más de 24 caracteres o muestra error si se intenta pegar texto más largo.",Failed,USWA-4
+71,"Comentario: Inválido (caracteres especiales no permitidos, ej: $%&/()=?¿).",Failed,USWA-5
+72,"Navegación: Prueba que presionar el botón Atrás te lleve a la página ""Para quién es el scooter"".",Passed,
+73,"Navegación: Prueba que cuando cambias entre las páginas ""Para quién es el scooter"" y ""Alquiler"", se guarden los datos introducidos anteriormente en los campos.",Passed,
+74,"Botón ""Pedir"": Si todos los campos obligatorios de ambas secciones (""Para quién es..."" y ""Alquiler"") están completos y válidos, se muestra el popup ""Pedido realizado"".",Passed,

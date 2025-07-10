@@ -1,0 +1,25 @@
+#,"Lista de Comprobación: Pantalla ""Estado del pedido""",Estado,Enlace al informe de errores
+1,"Prueba que acceder a ""Estado del pedido"" desde la cabecera (sin pedido previo) muestra el campo para ingresar el número de pedido y un botón ""Ver"".",Passed,
+2,Prueba que buscar un pedido con un número válido muestra correctamente toda la información del pedido y el estado actual resaltado en negro.,Passed,
+3,"Prueba que buscar un pedido con un número inválido o inexistente muestra el mensaje de error: ""No existe tal pedido. ¿Seguro que ese es el número correcto?"".",Passed,
+4,"Prueba que la imagen del ""scooter roto"" se muestra junto al mensaje de error ""No existe tal pedido..."" (según diseño Figma p.5 de diseños).",Failed,USW-1
+5,Prueba que el texto largo en los campos de datos del pedido (ej: dirección) se ajusta correctamente a la siguiente línea.,Passed,
+6,"Prueba que el estado 1 ""El scooter está en el almacén"" se muestra correctamente después de crear un pedido.",Passed,
+7,"Prueba que el estado 2 ""El repartidor o repartidora está en camino"" se activa y muestra el nombre del repartidor y su número de teléfono. (Requiere simulación/API)",Passed,
+8,Prueba que el texto del nombre del repartidor en estado 2 se ajusta a la siguiente línea si es demasiado largo. (Requiere simulación/API),Failed,USW-3
+9,"Prueba que el estado 3 ""El servicio de entrega llegó"" se activa correctamente. (Requiere simulación/API)",Failed,USW-4
+10,"Prueba que el estado 4 ""Bien, vamos a dar un paseo"" se activa y muestra el mensaje ""El alquiler finalizará el [fecha/hora]"". (Requiere simulación/API)",Failed,USW-5
+11,Prueba que los estados pasados en la cadena de estado se muestran en gris y con una marca de verificación (✓) en lugar del número.,Failed,USW-6
+12,"Prueba que el texto del 4º estado cambia a ""El periodo de alquiler terminó"" y ""El servicio de entrega recogerá el scooter"" cuando el alquiler finaliza (según P12/Figma). (Requiere simulación/API)",Failed,USW-7
+13,"Prueba que el estado ""Periodo de alquiler terminado"" (anteriormente estado 4) se vuelve gris después de un tiempo o al pasar a otro estado conceptual. (Requiere simulación/API)",Failed,USW-8
+14,"Prueba que el botón ""Cancelar el pedido"" está visible y habilitado para pedidos en estado ""El scooter está en el almacén"" o ""El repartidor... está en camino"".",Passed,
+15,"Prueba que el botón ""Cancelar el pedido"" está deshabilitado o no visible si el repartidor ya tiene el pedido (e.g., estado ""El servicio de entrega llegó""). (Requiere simulación/API)",Passed,
+16,"Prueba que al hacer clic en ""Cancelar el pedido"" aparece el popup ""¿Deseas cancelar el pedido?"" con botones ""Cancelar"" y ""Atrás"".",Passed,
+17,"Prueba que al hacer clic en ""Atrás"" en el popup de cancelación, se regresa a la pantalla de estado del pedido sin cambios.",Passed,
+18,"Prueba que al hacer clic en ""Cancelar"" en el popup de cancelación, aparece el popup ""El pedido ha sido cancelado..."" con el botón ""Bien"".",Passed,
+19,"Prueba que al hacer clic en ""Bien"" en el popup de post-cancelación, se redirige al usuario a la página de inicio.",Passed,
+20,"Prueba que un pedido cancelado no puede ser encontrado al buscar su número, mostrando el error ""No existe tal pedido..."".",Passed,
+21,"Prueba que un pedido atrasado cambia su estado a ""El repartidor o repartidora se demoró"" y muestra el mensaje de soporte. (Requiere simulación/API)",Passed,
+22,Prueba que el estado y la leyenda de un pedido atrasado están resaltados en rojo. (Requiere simulación/API),Passed,
+23,"Prueba que la cuenta regresiva para un pedido atrasado comienza cuando se recibe el pedido, no desde la fecha original. (Requiere simulación/API)",Passed,
+24,Prueba que se puede buscar otro número de pedido mientras se está visualizando la información de un pedido.,Passed,

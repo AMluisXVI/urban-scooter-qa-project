@@ -1,0 +1,31 @@
+Solicitud,Descripción de la revisión,Resultado esperado,Estado,Enlace al informe de errores
+URL para Repartidores (Couriers) - Registro,,,,
+POST /api/v1/courier,"Registro de repartidor - Éxito.
+(Req: ""La URL debe estar presente... registrarse... aceptar nombre de usuario, contraseña y nombre... campos login, passwordHash y firstName... passwordHash almacena el hash... Si el registro es exitoso, la entrada... debe aparecer en la base de datos..."")
+Body: {""login"": ""newcourier"", ""password"": ""7890"", ""firstName"": ""CourierName""} (cumpliendo restricciones de campo)","Estado 201 Created y cuerpo {""ok"": true}.
+Verificar en BD: Repartidor creado con login=""newcourier"", firstName=""CourierName"", y passwordHash siendo el hash de ""7890"".",Passed,
+POST /api/v1/courier,"Registro de repartidor - Error: login ya existente (no único).
+(Req: ""El campo de inicio de sesión debe ser único... si no tiene éxito, se debe devolver un error."")
+Body: {""login"": ""existingcourier"", ""password"": ""1234"", ""firstName"": ""Another""} (suponiendo que ""existingcourier"" ya existe)","Estado 409 Conflict y cuerpo {""message"": ""Este inicio de sesión no está disponible""}.",Passed,
+POST /api/v1/courier,"Registro de repartidor - Error: Datos insuficientes (ej. falta login).
+(Req: ""...si no tiene éxito, se debe devolver un error."")
+Body: {""password"": ""1234"", ""firstName"": ""Test""}","Estado 400 Bad Request y cuerpo {""message"": ""No hay suficientes datos para crear una cuenta""}.",Passed,
+,,,,
+URL para Repartidores (Couriers) - Eliminar,,,,
+DELETE /api/v1/courier/:id,"Eliminar cuenta de repartidor - Éxito.
+(Req: ""La URL para eliminar la cuenta... debe estar presente. Al acceder se debe obtener la ID... Al eliminar, los pedidos vinculados en la tabla Orders... deben borrarse."")
+Reemplazar :id con una ID de repartidor existente que tenga pedidos asociados.","Estado 200 OK y cuerpo {""ok"": true}.
+Verificar en BD: El repartidor con :id es eliminado de la tabla Couriers. Todos los pedidos en la tabla Orders que estaban vinculados a este repartidor (tenían su courierId) son eliminados.",Passed,
+DELETE /api/v1/courier/:id,"Eliminar cuenta de repartidor - Falla (ID de repartidor no existente).
+(Req: ""...Al acceder se debe obtener la ID..."") 
+Reemplazar :id con una ID de repartidor que no exista.","Estado 404 Not Found y cuerpo {""message"": ""No hay un mensajero con esta ID""}.",Passed,
+DELETE /api/v1/courier/ (sin ID en path),"Eliminar cuenta de repartidor - Falla (ID no proporcionada en la URL)
+(Req: ""...Al acceder se debe obtener la ID..."")","Estado 400 Bad Request y cuerpo {""message"": ""No hay datos suficientes para eliminar el mensajero""} (o error de enrutamiento 404 si la ruta no está definida sin ID).",Failed,API-1
+,,,,
+URL para los Pedidos (Orders) - Recuperar por Seguimiento,,,,
+GET /api/v1/orders/track?t={trackNumber_existente},"Recuperar datos del pedido por número de seguimiento - Éxito.
+(Req: ""Debe haber una URL para recuperar los datos del pedido desde su número de seguimiento. Se debe obtener un número en el acceso. Si se encuentra un pedido que coincida, se deben devolver sus datos..."")","Estado 200 OK. El cuerpo de la respuesta debe contener el objeto order con todos sus detalles (incluyendo id, firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, track, status, color, comment, createdAt, updatedAt, y campos booleanos como cancelled, finished, inDelivery).",Passed,
+GET /api/v1/orders/track?t={trackNumber_inexistente},"Recuperar datos del pedido por número de seguimiento - Falla (número de seguimiento no existente).
+(Req: ""...de lo contrario, se debe devolver un error."")","Estado 404 Not Found y cuerpo {""message"": ""Pedido no encontrado""}.",Passed,
+GET /api/v1/orders/track (sin parámetro t),"Recuperar datos del pedido por número de seguimiento - Falla (número de seguimiento no proporcionado).
+(Req: ""...Se debe obtener un número en el acceso... de lo contrario, se debe devolver un error."")","Estado 400 Bad Request y cuerpo {""message"": ""No hay suficientes datos para la búsqueda""}.",Passed,
