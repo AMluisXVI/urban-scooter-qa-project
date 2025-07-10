@@ -1,35 +1,84 @@
-# Proyecto de Aseguramiento de Calidad (QA): Urban Scooter
+# 🛴 Urban Scooter – Quality Assurance (QA) Project
 
-Este repositorio contiene los artefactos de prueba y la documentación generada durante el proyecto final de aseguramiento de calidad para la aplicación "Urban Scooter", un servicio de alquiler de scooters eléctricos.
+This repository contains the test artifacts and documentation generated during the final quality assurance project for the **Urban Scooter** application, a modern electric scooter rental service.
 
-El objetivo de este proyecto es demostrar un enfoque sistemático y profesional para las pruebas de software, cubriendo aplicaciones web, móviles y API, desde la planificación inicial hasta el reporte de errores.
-
-## Habilidades y Competencias Demostradas
-
-*   **Análisis de Requisitos y Diseño de Pruebas:** Interpretación de especificaciones técnicas para crear una estrategia de pruebas efectiva.
-*   **Creación y Ejecución de Casos de Prueba:** Diseño de casos de prueba detallados aplicando técnicas como **Clases de Equivalencia** y **Análisis de Valores Límite**.
-*   **Pruebas de Aplicaciones Web, Móviles y API:** Experiencia práctica en la validación de diferentes capas de una aplicación moderna.
-*   **Verificación de Base de Datos (SQL):** Elaboración de consultas SQL para validar la integridad de los datos.
-*   **Reporte y Seguimiento de Errores:** Documentación clara y concisa de los defectos encontrados.
+The goal of this project is to showcase a systematic and professional approach to software testing, covering web, mobile, and API layers—from initial planning to defect reporting.
 
 ---
 
-## Fase de Análisis y Planificación
+## 💡 Skills & Competencies Demonstrated
 
-Antes de escribir una sola prueba, se realizó un análisis completo de los requisitos para desglosar las funcionalidades de la aplicación. El siguiente mapa mental fue creado como una herramienta visual para entender las interdependencias, los flujos de usuario y los puntos críticos a probar.
+✅ **Requirements Analysis & Test Design:**  
+Interpreted technical specifications to craft an effective test strategy.
+
+✅ **Test Case Development & Execution:**  
+Designed detailed test cases applying techniques such as **Equivalence Partitioning** and **Boundary Value Analysis**.
+
+✅ **Web, Mobile & API Testing:**  
+Practical experience validating multiple layers of a modern application.
+
+✅ **Database Verification (SQL):**  
+Created SQL queries to validate data integrity across transactions.
+
+✅ **Defect Reporting & Tracking:**  
+Produced clear and concise defect documentation to facilitate resolution.
+
 ---
 
-## 📂 Contenido y Estructura del Repositorio
+## 🗂️ Analysis & Planning Phase
 
-El proyecto está organizado en las siguientes carpetas para una navegación clara y lógica de todos los artefactos de prueba.
+Before writing a single test, a thorough requirements analysis was conducted to break down the application's core functionality.  
+A mind map was created as a visual tool to illustrate user flows, interdependencies, and critical test areas.
 
-### `/docs`
-Esta carpeta centraliza toda la documentación fundamental del proyecto. Aquí se encuentran los documentos de requisitos (back-end, aplicación web y móvil) que sirvieron como base para todas las pruebas, así como el mapa mental visual que detalla la estrategia de análisis.
+---
 
-### `/test-artifacts`
-El corazón del trabajo de QA. Contiene todos los materiales de prueba diseñados y utilizados durante la ejecución, incluyendo:
-*   **Casos de Prueba (Test Cases):** Documentos detallados con las pruebas funcionales para la aplicación web, la aplicación móvil y la API.
-*   **Consultas SQL (SQL Queries):** Los scripts SQL utilizados para interrogar la base de datos y verificar que los datos se creaban, actualizaban y eliminaban correctamente como resultado de las acciones en la aplicación.
+## 📁 Repository Content & Structure
 
-### `/bug-reports`
-Un directorio dedicado a la documentación de todos los defectos, errores y fallos identificados durante el ciclo de pruebas. Cada archivo en esta carpeta representa un informe de error individual, siguiendo una plantilla profesional para asegurar claridad y facilitar la reproducibilidad por parte de un equipo de desarrollo.
+The project is organized into the following directories to ensure clear and logical navigation of all test assets:
+
+---
+
+### 📄 `/docs`
+
+This folder centralizes all foundational project documentation.  
+It includes:
+
+- Requirements documents (for back-end, web, and mobile applications) used as the basis for all testing.
+- The visual mind map detailing the analysis and strategy.
+
+---
+
+### 🧪 `/test-artifacts`
+
+The heart of the QA work.  
+Contains all testing materials designed and executed throughout the project, including:
+
+- **Test Cases:**  
+  Comprehensive documents with functional tests for the web app, mobile app, and APIs.
+- **SQL Queries:**  
+  Scripts used to query the database and verify that records were created, updated, and deleted correctly as a result of user actions.
+
+---
+
+### 🐞 `/bug-reports`
+
+A dedicated directory documenting all defects, errors, and issues identified during the test cycles.  
+Each file in this folder represents an individual bug report, following a professional template to ensure clarity and reproducibility by the development team.
+
+---
+
+## ✨ Why This Project Matters
+
+This project not only validates the functionality of Urban Scooter but also demonstrates:
+
+- A full-lifecycle QA process from planning to execution.
+- The ability to adapt testing approaches across multiple platforms.
+- Strong documentation practices to support collaboration and transparency.
+
+---
+
+## 📬 Contact
+
+If you have any questions, suggestions, or would like to discuss this project further, feel free to connect via Discord or by opening an issue in this repository.
+
+---
